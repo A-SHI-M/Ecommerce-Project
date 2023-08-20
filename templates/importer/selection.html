@@ -1,0 +1,37 @@
+{% extends 'importer/contact.html' %}
+
+
+<div id="drink" class="tm-page-content">
+    <!-- Drink Menu Page -->
+    <nav class="tm-black-bg tm-drinks-nav">
+      <ul>
+        <li>
+          <a href="#" class="tm-tab-link active" data-id="cold">Select Importer</a>
+        </li>
+        <!-- <li>
+          <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
+        </li>
+        <li>
+          <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+        </li> -->
+      </ul>
+    </nav>
+
+    <div id="cold" class="tm-tab-content">
+      <div class="tm-list">
+        {% for importer in importers %}
+        <a href="{% url 'importer:contact' %}">
+        <div class="tm-list-item">          
+          <img src="{% static 'importer/img/iced-americano.png' %}" alt="Image" class="tm-list-item-img">
+          <div class="tm-black-bg tm-list-item-text">
+            <h3 class="tm-list-item-name">{{importer.full_name}} (ID: {{importer.id}})<span class="tm-list-item-price">$10.25</span></h3>
+            <p class="tm-list-item-description">Contact: {{importer.phone}}</p>
+          </div>
+        </div>
+        </a>
+        {% endfor %}
+         
+                               
+      </div>
+    </div> 
+</div>

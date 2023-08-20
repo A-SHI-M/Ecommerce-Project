@@ -1,0 +1,84 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="username" name="username" placeholder="enter your username">
+        <br>
+        <input type="password" name="password" placeholder="*********">
+        <br>
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<title>Login Page</title>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="" method="post">
+    {% csrf_token %}
+      <input type="username" class="login-input" name="username" placeholder="enter your username" required>
+      <input type="password" class="login-input" name="password" placeholder="*********" required>
+      <button type="submit" class="login-button" value="Login">Login</button>
+    </form>
+  </div>
+</body>
+</html>
